@@ -22,4 +22,3 @@ JavaScript: For all interactive functionality and data management.
 
 Local Storage API: To save and retrieve data across sessions.
 
-Font Awesome: For the edit and delete icons.

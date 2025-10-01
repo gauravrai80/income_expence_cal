@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // DOM Elements
+   
     const transactionForm = document.getElementById('transaction-form');
     const descriptionInput = document.getElementById('description');
     const amountInput = document.getElementById('amount');
@@ -11,12 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const netBalanceEl = document.getElementById('net-balance-amount');
     const filterInputs = document.querySelectorAll('input[name="filter"]');
     
-    // Global State
     let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
     let isEditing = false;
     let editId = null;
 
-    // --- CRUD Operations ---
+
 
     // CREATE: Add a new transaction
     function addTransaction(e) {
@@ -94,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="amount ${amountColorClass}">${sign}${formattedAmount}</span>
                 </div>
                 <div class="actions">
-                    <button class="edit-btn" onclick="editTransaction(${transaction.id})"><i class="fas fa-edit"></i></button>
-                    <button class="delete-btn" onclick="deleteTransaction(${transaction.id})"><i class="fas fa-trash-alt"></i></button>
+                    <button class="edit-btn" onclick="editTransaction(${transaction.id})">edit</i></button>
+                    <button class="delete-btn" onclick="deleteTransaction(${transaction.id})">delete</button>
                 </div>
             `;
             transactionsList.appendChild(li);
@@ -114,8 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('add-btn').innerText = 'Update Transaction';
         }
     };
-
-    // --- Helper Functions ---
 
     // Calculate and update balance summary
     function updateBalance() {
@@ -139,14 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.floor(Math.random() * 100000000);
     }
 
-    // Clear input fields
+
     function clearFields() {
         descriptionInput.value = '';
         amountInput.value = '';
         document.querySelector('input[name="type"][value="income"]').checked = true;
     }
-    
-    // Reset button functionality
+
     resetBtn.addEventListener('click', () => {
         clearFields();
         isEditing = false;
@@ -159,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('transactions', JSON.stringify(transactions));
     }
 
-    // --- Event Listeners ---
 
     // Form submission for adding/updating
     transactionForm.addEventListener('submit', addTransaction);
@@ -177,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input.addEventListener('change', renderTransactions);
     });
 
-    // Initial render and balance update
+   
     renderTransactions();
     updateBalance();
 });

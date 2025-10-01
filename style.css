@@ -1,15 +1,3 @@
-
-
-:root {
-    --primary-color: #5d5dff;
-    --secondary-color: #f1f1f1;
-    --background-color: #f9f9f9;
-    --text-color: #333;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --income-color: #28a745;
-    --expense-color: #dc3545;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,8 +6,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color:#f9f9f9;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -33,12 +21,12 @@ body {
     background-color: #fff;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: var(--primary-color);
+    color: #5d5dff;
     margin-bottom: 20px;
 }
 
@@ -54,8 +42,8 @@ h1 {
     flex: 1;
     padding: 15px;
     border-radius: 8px;
-    background-color: var(--secondary-color);
-    box-shadow: var(--box-shadow);
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .balance-card h3 {
@@ -70,15 +58,15 @@ h1 {
 }
 
 .total-income p {
-    color: var(--income-color);
+    color:  #28a745;
 }
 
 .total-expenses p {
-    color: var(--expense-color);
+    color: #dc3545;
 }
 
 .net-balance p {
-    color: var(--primary-color);
+    color: #5d5dff;
 }
 
 .form-container {
@@ -134,7 +122,7 @@ button {
 
 #add-btn {
     flex-grow: 1;
-    background-color: var(--primary-color);
+    background-color: #5d5dff;
     color: #fff;
 }
 
@@ -170,7 +158,7 @@ button {
 .transactions-list-container h2 {
     text-align: center;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color:#5d5dff;
 }
 
 #transactions-list {
@@ -194,11 +182,11 @@ button {
 }
 
 .transaction-item.income {
-    border-left: 5px solid var(--income-color);
+    border-left: 5px solid  #28a745;
 }
 
 .transaction-item.expense {
-    border-left: 5px solid var(--expense-color);
+    border-left: 5px solid #dc3545;
 }
 
 .transaction-details {
@@ -215,13 +203,12 @@ button {
 }
 
 .transaction-details .amount.income-text {
-    color: var(--income-color);
+    color: #28a745;
 }
 
 .transaction-details .amount.expense-text {
-    color: var(--expense-color);
+    color: #dc3545;
 }
-
 .actions {
     display: flex;
     gap: 10px;
@@ -237,11 +224,11 @@ button {
 }
 
 .actions .edit-btn:hover {
-    color: var(--primary-color);
+    color: #5d5dff;
 }
 
 .actions .delete-btn:hover {
-    color: var(--expense-color);
+    color:  #dc3545;
 }
 
 /* Responsive Design */
