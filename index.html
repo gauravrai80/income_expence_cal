@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Expense Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Income Expense Calculator</h1>
+        <div class="balance-container">
+            <div class="balance-card total-income">
+                <h3>Total Income</h3>
+                <p id="total-income-amount">₹0.00</p>
+            </div>
+            <div class="balance-card total-expenses">
+                <h3>Total Expenses</h3>
+                <p id="total-expenses-amount">₹0.00</p>
+            </div>
+            <div class="balance-card net-balance">
+                <h3>Net Balance</h3>
+                <p id="net-balance-amount">₹0.00</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <form id="transaction-form">
+                <div class="input-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" required>
+                </div>
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" required>
+                </div>
+                <div class="input-group type-group">
+                    <label>
+                        <input type="radio" name="type" value="income" checked>
+                        Income
+                    </label>
+                    <label>
+                        <input type="radio" name="type" value="expense">
+                        Expense
+                    </label>
+                </div>
+                <div class="button-group">
+                    <button type="submit" id="add-btn">Add Transaction</button>
+                    <button type="button" id="reset-btn">Reset</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="filter-container">
+            <label>
+                <input type="radio" name="filter" value="all" checked>
+                All
+            </label>
+            <label>
+                <input type="radio" name="filter" value="income">
+                Income
+            </label>
+            <label>
+                <input type="radio" name="filter" value="expense">
+                Expense
+            </label>
+        </div>
+
+        <div class="transactions-list-container">
+            <h2>Transactions History</h2>
+            <ul id="transactions-list">
+                </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
